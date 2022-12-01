@@ -28,6 +28,9 @@ const tx = contactDb.transaction('contact', 'readwrite');
  // Open up the desired object store.
  const store = tx.objectStore('contact');
 
+  // Use the .add() method on the store and pass in the content.
+  const request = store.add({ name: name, home_phone: home, cell_phone: cell, email: email });
+
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => console.error('getDb not implemented');
 
