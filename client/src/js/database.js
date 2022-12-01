@@ -54,5 +54,10 @@ export const getDb = async () => {
   // Use the .getAll() method to get all data in the database.
     const request = store.getAll();
 
+  // Get confirmation of the request.
+  const result = await request;
+  console.log('result.value', result);
+  return result;
+};
 
 initdb();
