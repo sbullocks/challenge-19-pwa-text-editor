@@ -37,8 +37,14 @@ export const putDb = async (content) => {
   console.log('🚀 - data saved to the database', result);
 };
 ;
-
+// Export a function we will use to GET to the database.
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error('getDb not implemented');
+export const getDb = async () => { 
+  console.error('getDb not implemented');
+
+  // Create a connection to the database database and version we want to use.
+  const contactDb = await openDB('contact', 1);
+
+
 
 initdb();
