@@ -15,8 +15,12 @@ const initdb = async () =>
     },
   });
 
+// Export a function we will use to POST to the database.
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => console.error('putDb not implemented');
+
+// Create a connection to the database database and version we want to use.
+const contactDb = await openDB('contact', 1);
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => console.error('getDb not implemented');
