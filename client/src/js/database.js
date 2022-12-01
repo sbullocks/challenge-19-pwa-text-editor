@@ -25,6 +25,9 @@ const contactDb = await openDB('contact', 1);
 // Create a new transaction and specify the database and data privileges.
 const tx = contactDb.transaction('contact', 'readwrite');
 
+ // Open up the desired object store.
+ const store = tx.objectStore('contact');
+
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => console.error('getDb not implemented');
 
