@@ -1,7 +1,7 @@
 import { openDB } from 'idb';
 
 const initdb = async () =>
-// We are creating a new database named 'contact' which will be using version 1 of the database.
+// We are creating a new database named 'jate' which will be using version 1 of the database.
   openDB('JATE', 1, {
     // Add our database schema if it has not already been initialized.
     upgrade(db) {
@@ -21,10 +21,10 @@ export const putDb = async (content) => {
   console.error('putDb not implemented');
 
   // Create a connection to the database database and version we want to use.
-  const contactDb = await openDB('JATE', 1);
+  const jateDb = await openDB('JATE', 1);
 
   // Create a new transaction and specify the database and data privileges.
-  const tx = contactDb.transaction('JATE', 'readwrite');
+  const tx = jateDb.transaction('JATE', 'readwrite');
 
   // Open up the desired object store.
   const store = tx.objectStore('JATE');
@@ -43,10 +43,10 @@ export const getDb = async () => {
   console.error('getDb not implemented');
 
   // Create a connection to the database database and version we want to use.
-  const contactDb = await openDB('JATE', 1);
+  const jateDb = await openDB('JATE', 1);
 
   // Create a new transaction and specify the database and data privileges.
-    const tx = contactDb.transaction('JATE', 'readonly');
+    const tx = jateDb.transaction('JATE', 'readonly');
 
   // Open up the desired object store.
   const store = tx.objectStore('JATE');
